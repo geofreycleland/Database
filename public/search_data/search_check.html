@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="shortcut icon"
+        href="https://cdn.shortpixel.ai/spai/q_lossless+ret_img+to_webp/https://www.proservice.com/wp-content/uploads/2018/07/favicon.png"
+        data-spai-egr="1" type="image/x-icon">
+    <title>ProService Hawaii: Outsourced HR Services Provider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body class="w3-light-grey">
+
+    <!-- Top container -->
+    <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+        <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-blue" onclick="w3_open();"><i
+                class="fa fa-bars"></i>  Menu</button>
+        <span class="w3-bar-item w3-right" style="margin: -5px 0px;"><img src="images/white-logo.webp" width="180px"
+                height="auto">
+        </span>
+    </div>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container w3-row">
+          <div class="w3-col s4">
+            <img src="images/avatar2.png" class="w3-circle w3-margin-right" style="width:46px">
+          </div>
+          <div class="w3-col s8 w3-bar">
+            <span> Welcome, <strong>Mike</strong></span><br>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a>
+          </div>
+        </div><a href="index.html">
+          <button class="w3-button w3-white w3-round-large" style="width:100%;"><i class="fa fa-sign-out"></i>Log
+            out</button></a>
+        <hr>
+        <div class="w3-container">
+          <h4><b>Dashboard</b></h4>
+        </div>
+        <div class="w3-bar-block">
+          <a href="/manager_home.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw"></i>
+            Home</a>
+          <a href="/flagged_checks.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-flag fa-fw"></i>
+            Flagged Checks</a>
+          <a href="/add_data.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-users fa-fw"></i> Forms</a>
+          <a href="/search_data.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-search fa-fw"></i>
+            Search Data</a>
+          <a href="/reports.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bank fa-fw"></i> View
+            Reports</a>
+          <a href="/help.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bookmark fa-fw"></i> Help</a>
+          <div class="w3-container">
+            <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black"
+              onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+      </nav>
+
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+        title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+        <!-- Header -->
+        <header class="w3-display-container w3-content w3-wide" style="max-width:100%;min-width:500px; height: 50px;"
+            id="home">
+        </header>
+        
+        <body>
+            <div style="width: 960px; margin: auto;">
+                <Form action="/process_check_date" method="POST" target="print_popup"
+                    onsubmit="window.open('about:blank','print_popup','width=600,height=600');" class="w3-half">
+                    <H1>Search Generated Checks by Date</H1>
+                    Enter Start Date Range: <input type="date" name='start_date' style="width: 80%"><br>
+                    Enter End Date Range: <input type="date" name='end_date' style="width: 80%"><BR>
+                    <div><br>
+                        <input type="submit" value="Submit" style="margin-bottom: 50px;">
+                    </div>
+                </Form>
+                <Form action="/process_check_amount" method="POST" target="print_popup"
+                    onsubmit="window.open('about:blank','print_popup','width=600,height=600');" class="w3-half">
+                    <H1>Search Generated Checks by Amount</H1>
+                    Enter Minimum Amount: <input type="text" name='low_amount' style="width: 80%"><br>
+                    Enter Maximum Amount: <input type="text" name='high_amount' style="width: 80%"><BR>
+                    <div><br>
+                        <input type="submit" value="Submit" style="margin-bottom: 50px;">
+                    </div>
+                </Form>
+                <Form action="/process_check_type" method="POST" target="print_popup"
+                    onsubmit="window.open('about:blank','print_popup','width=600,height=600');">
+                    <H1>Search Generated Checks by Type</H1>
+                    Enter Check Type <input type='text' name='Check_Type'><BR>
+                    <div style="text-align:center">
+                        <input type="submit" value="Submit">
+                    </div>
+                </Form><br>
+                <Form action="/process_check_number" method="POST" target="print_popup"
+                    onsubmit="window.open('about:blank','print_popup','width=600,height=600');">
+                    <H1>Search Generated Checks by Check Number</H1>
+                    Enter Check Number<input type='text' name='Check_Number'><BR>
+                    <div style="text-align:center">
+                        <input type="submit" value="Submit">
+                    </div>
+                </Form><br>
+            </div><br>
+            <div id="images">
+                <img class="logo" src="images/ProServiceLogo.png" style="width:200px;">
+            </div>
+    </div>
+    <script>
+        // Get the Sidebar
+        var mySidebar = document.getElementById("mySidebar");
+
+        // Get the DIV with overlay effect
+        var overlayBg = document.getElementById("myOverlay");
+
+        // Toggle between showing and hiding the sidebar, and add overlay effect
+        function w3_open() {
+            if (mySidebar.style.display === 'block') {
+                mySidebar.style.display = 'none';
+                overlayBg.style.display = "none";
+            } else {
+                mySidebar.style.display = 'block';
+                overlayBg.style.display = "block";
+            }
+        }
+
+        // Close the sidebar with the close button
+        function w3_close() {
+            mySidebar.style.display = "none";
+            overlayBg.style.display = "none";
+        }
+    </script>
+
+</body>
+
+</html>

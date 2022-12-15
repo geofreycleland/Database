@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+    <td><B>Check Number</td>
+    <td><B>Check Amount</td>
+    <td><B>Bank Name</td>
+    <td><B>Check Date</td>
+    <td><B>Status</td></b>
+    <tr>
+        <td> 645342</td>
+        <td> 1267.43</td>
+        <td> Hawaii Federal Credit Union</td>
+        <td> 2022-09-19T10:00:00.000Z</td>
+        <td class="color" id=color0> Flagged</td>
+        <script>    
+            var color = document.getElementById('color0').innerText; 
+            if (color === 'Flagged') { 
+                document.getElementById("color0").style.backgroundColor = 'Red'; 
+                } else if (color === 'Under Investigation') { 
+                    document.getElementById("color0").style.backgroundColor = 'yellow'; 
+                    } else { 
+                        document.getElementById("color0").style.backgroundColor = 'green'; 
+                        }; </script>
+    </tr>
+    <tr>
+        <td> 768544</td>
+        <td> 2354.23</td>
+        <td> Bank of Hawaii</td>
+        <td> 2022-09-09T10:00:00.000Z</td>
+        <td class="color" id=color1> Flagged</td>
+        <script>    var color = document.getElementById('color1').innerText; if (color === 'Flagged') { document.getElementById("color1").style.backgroundColor = 'Red'; } else if (color === 'Under Investigation') { document.getElementById("color1").style.backgroundColor = 'yellow'; } else { document.getElementById("color1").style.backgroundColor = 'green'; }; </script>
+    </tr>
+    <tr>
+        <td> 988675</td>
+        <td> 4536.34</td>
+        <td> Bank of Hawaii</td>
+        <td> 2022-09-21T10:00:00.000Z</td>
+        <script>    var color = document.getElementById('color2').innerText; if (color === 'Flagged') { document.getElementById("color2").style.backgroundColor = 'Red'; } else if (color === 'Under Investigation') { document.getElementById("color2").style.backgroundColor = 'yellow'; } else { document.getElementById("color2").style.backgroundColor = 'green'; }; </script>
+        <td class="color" id=color2> Flagged</td>
+    </tr>
+    </table>
+</body>
+
+</html>
